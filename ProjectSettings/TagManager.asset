@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Enemy
+  - HitBox
+  - Keybind
+  - Weapon
+  - PickUp
+  - Obstacle
+  - Spellbook
+  - Minion
+  - Interactable
+  - FxTemporaire
+  - Chest
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - PostProcessing
+  - Clickable
+  - Block
+  - Both
+  - Minimap
+  - Light
+  - Obstacle
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 1440389073
+    locked: 0
+  - name: Buildings
+    uniqueID: 2925926523
+    locked: 0
+  - name: Obstacle
+    uniqueID: 2859300771
+    locked: 0
+  - name: Player
+    uniqueID: 3383381599
+    locked: 0
+  - name: Magic
+    uniqueID: 4270291591
+    locked: 0
+  - name: UI
+    uniqueID: 623634955
+    locked: 0

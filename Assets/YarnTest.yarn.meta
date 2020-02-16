@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 87abea9a281c4cf4f9708125c2ed40ec
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: 
+  stringIDs:
+  - YarnTest-Tutorial-0
+  - YarnTest-Tutorial-1
+  - YarnTest-Tutorial-2
+  - YarnTest-Tutorial-3
+  - YarnTest-Grandma-4
+  - YarnTest-Tutorial.Path1-5
+  - YarnTest-Tutorial.Path2-6
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {instanceID: 0}
+  localizations: []

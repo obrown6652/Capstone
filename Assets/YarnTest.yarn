@@ -1,0 +1,31 @@
+title: Tutorial
+tags: 
+colorID: 0
+position: 437,-168
+---
+Hello!!!
+This is just a Test to get the basic Dialogue system working 
+[[Go to path 1! |Tutorial.Path1]] 
+[[ Go to path 2 |Tutorial.Path2]] 
+===
+title: Grandma
+tags: 
+colorID: 0
+position: 910,35
+---
+Hello deary, let me tell you all about the days of my youth...
+===
+title: Tutorial.Path1
+tags: 
+colorID: 0
+position: 242,112
+---
+This is path 1
+===
+title: Tutorial.Path2
+tags: 
+colorID: 0
+position: 616,95
+---
+This is path 2
+===

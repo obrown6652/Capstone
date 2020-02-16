@@ -1,0 +1,51 @@
+title: Test
+tags: 
+colorID: 0
+position: 547,98
+---
+Hello i'm just a dummy
+[[ Tell me something intresting dummy |Test.Intresting]] 
+[[ See ya! dummy|Test.Bye ]] 
+===
+title: Test.Intresting
+tags: 
+colorID: 0
+position: 601,387
+---
+Ummm there's a chest up ahead with all the loot in it 
+<< if $open_Chest is false>> 
+    [[Whatttt! with all the loot in the game Oh boy Thanks!! now i'm going to be the best necro that ever livvveeee, Bye.|Test.Bye ]] 
+<<else>>
+    [[Already open it.|Test.Bye ]] 
+<<endif>> 
+===
+title: Test.Bye
+tags: 
+colorID: 0
+position: 312,393
+---
+See ya!!
+===
+title: Test2
+tags: 
+colorID: 0
+position: 966,81
+---
+HAHAHAHA!!! YOU THOUGHT I WAS A DUMMY BUT NOOO IT WAS ME DIO!!!
+[[NOOO!! I thought I destory you 2 season ago.|Test2.Part1 ]] 
+[[ DIOOOO!! You have trick me for the last time prepared to meet your end here this time.|Test2.Part2 ]] 
+===
+title: Test2.Part1
+tags: 
+colorID: 0
+position: 918,384
+---
+Foolish human a mere mortal can not destory me. For your insolence I shall show you the true power of Dio
+===
+title: Test2.Part2
+tags: 
+colorID: 0
+position: 1196,368
+---
+HAHAHA! I am god the one and only ruler of this world and all shall bow down before me
+===

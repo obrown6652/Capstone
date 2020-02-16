@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4519a5018f03cb846985d229bf8c12ca, type: 3}
+  m_Name: RedRobe
+  m_EditorClassIdentifier: 
+  icon: {fileID: 4049485383413392914, guid: 2bdc3aaedadaf824ba97f9c007a25a39, type: 3}
+  stacksSize: 0
+  title: RedRobe
+  quality: 2
+  WeaponAnimationSpeed: 0
+  armorType: 0
+  health: 0
+  healthRecovery: 0
+  magic: 0
+  magicRecovery: 0
+  magicDamage: 5
+  physicalDamage: 5
+  Resistance: 10
+  speed: 0
+  animationClips:
+  - {fileID: 7400000, guid: e11c47342b279d34c9c82ff8385276a9, type: 2}
+  - {fileID: 7400000, guid: 722d68f3b60bf584ba29da5b17f3e596, type: 2}
+  - {fileID: 7400000, guid: 18fa1143259b72e45a5af997175d77f6, type: 2}
+  - {fileID: 7400000, guid: b020335ee2c5af746be90961f21d6ebb, type: 2}
+  - {fileID: 7400000, guid: 1bea5a3d097fd6c4cb6a52ebbc14ebe3, type: 2}
+  - {fileID: 7400000, guid: 8c8c93cb0ae3c9b4384b3a91a61b9f45, type: 2}
+  - {fileID: 7400000, guid: a27f84f62c6d20e4f83729b42ff56597, type: 2}
+  - {fileID: 7400000, guid: 57a3e3d621740a3408e926538ac56e9c, type: 2}

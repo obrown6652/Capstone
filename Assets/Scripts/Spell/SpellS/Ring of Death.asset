@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c33f960d4146741baab0f7b30f72d6, type: 3}
+  m_Name: Ring of Death
+  m_EditorClassIdentifier: 
+  name: Ringofdeath
+  damage: 20
+  icon: {fileID: 21300000, guid: 94572e1ff0a584641b66441b2c3fceb2, type: 3}
+  castTime: 0.44
+  Description: 
+  magicCost: 20
+  spellType: 0
+  parameter: ringofdeath

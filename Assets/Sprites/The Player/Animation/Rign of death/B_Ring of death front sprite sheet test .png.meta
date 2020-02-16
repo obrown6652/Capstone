@@ -1,0 +1,418 @@
+fileFormatVersion: 2
+guid: b811bfa4a3c129145acb34a94d528644
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -632051418735270010
+    second: B_Ring of death front sprite sheet test _0
+  - first:
+      213: -30899501161552344
+    second: B_Ring of death front sprite sheet test _1
+  - first:
+      213: 8190245671369504017
+    second: B_Ring of death front sprite sheet test _2
+  - first:
+      213: 631371777765098574
+    second: B_Ring of death front sprite sheet test _3
+  - first:
+      213: -4362318728133836466
+    second: B_Ring of death front sprite sheet test _4
+  - first:
+      213: -8929650455060918205
+    second: B_Ring of death front sprite sheet test _5
+  - first:
+      213: 7579115747762176852
+    second: B_Ring of death front sprite sheet test _6
+  - first:
+      213: -848641475008050829
+    second: B_Ring of death front sprite sheet test _7
+  - first:
+      213: 3615328943714056604
+    second: B_Ring of death front sprite sheet test _8
+  - first:
+      213: 9150298561361214418
+    second: B_Ring of death front sprite sheet test _9
+  - first:
+      213: -4867938492896484595
+    second: B_Ring of death front sprite sheet test _10
+  - first:
+      213: 2219827684574302044
+    second: B_Ring of death front sprite sheet test _11
+  - first:
+      213: -4854673090564207893
+    second: B_Ring of death front sprite sheet test _12
+  - first:
+      213: -4098808721299184018
+    second: B_Ring of death front sprite sheet test _13
+  - first:
+      213: -7105243372021983734
+    second: B_Ring of death front sprite sheet test _14
+  - first:
+      213: 7866772658384707230
+    second: B_Ring of death front sprite sheet test _15
+  - first:
+      213: -7576315425082707338
+    second: B_Ring of death front sprite sheet test _16
+  - first:
+      213: 780213253399526292
+    second: B_Ring of death front sprite sheet test _17
+  - first:
+      213: 5207213379715451959
+    second: B_Ring of death front sprite sheet test _18
+  - first:
+      213: -1609982479756463115
+    second: B_Ring of death front sprite sheet test _19
+  - first:
+      213: -4223449057365556972
+    second: B_Ring of death front sprite sheet test _20
+  - first:
+      213: -8625675599171854962
+    second: B_Ring of death front sprite sheet test _21
+  - first:
+      213: -3705746815814451018
+    second: B_Ring of death front sprite sheet test _22
+  - first:
+      213: -8566119965363664917
+    second: B_Ring of death front sprite sheet test _23
+  - first:
+      213: 593214626525722959
+    second: B_Ring of death front sprite sheet test _24
+  - first:
+      213: 1784841430650283711
+    second: B_Ring of death front sprite sheet test _25
+  - first:
+      213: -2772132928366802436
+    second: B_Ring of death front sprite sheet test _26
+  - first:
+      213: -1879013079280034146
+    second: B_Ring of death front sprite sheet test _27
+  - first:
+      213: 2379521267217413180
+    second: B_Ring of death front sprite sheet test _28
+  - first:
+      213: 5526085138982021866
+    second: B_Ring of death front sprite sheet test _29
+  - first:
+      213: -2741568114198161875
+    second: B_Ring of death front sprite sheet test _30
+  - first:
+      213: 1389541442648022740
+    second: B_Ring of death front sprite sheet test _31
+  - first:
+      213: 5897921303186270177
+    second: B_Ring of death front sprite sheet test _32
+  - first:
+      213: 5088870608554072175
+    second: B_Ring of death front sprite sheet test _33
+  - first:
+      213: 7844195746862815591
+    second: B_Ring of death front sprite sheet test _34
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: B_Ring of death front sprite sheet test _0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5234375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db77e300eaffb764eb8b99d6e6c4f9c4
+      internalID: -632051418735270010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_Ring of death front sprite sheet test _1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5234375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32fa8bbb551dee2498c18b7ea91942dd
+      internalID: -30899501161552344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_Ring of death front sprite sheet test _2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5234375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64fe79933f26aac48b7679d7a1ca4cf5
+      internalID: 8190245671369504017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_Ring of death front sprite sheet test _3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5234375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f88e461a1a691af4ebfa802e3c002b09
+      internalID: 631371777765098574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_Ring of death front sprite sheet test _4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5234375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bc0159e5d353a045bc3c954ed296382
+      internalID: -4362318728133836466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_Ring of death front sprite sheet test _5
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5234375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 859234c4f57ca7c4687c0c905d32d9ac
+      internalID: -8929650455060918205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_Ring of death front sprite sheet test _6
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5234375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7ccec78080dff54fab3e00c3e35dad7
+      internalID: 7579115747762176852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_Ring of death front sprite sheet test _7
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 0
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5234375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a868fabc7e4ce164caf029749173beed
+      internalID: -848641475008050829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_Ring of death front sprite sheet test _8
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5234375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb8774105ac07de489498ebc3620077f
+      internalID: 3615328943714056604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_Ring of death front sprite sheet test _9
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 0
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5234375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6da70d4c8ab6f649a4ee919de5cfb1f
+      internalID: 9150298561361214418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

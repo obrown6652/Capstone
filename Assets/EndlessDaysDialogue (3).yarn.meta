@@ -1,0 +1,29 @@
+fileFormatVersion: 2
+guid: 2279ce8c401bd934cb01fda4e2b7f2f5
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: 
+  stringIDs:
+  - EndlessDaysDialogue (3)-Test-0
+  - EndlessDaysDialogue (3)-Test-1
+  - EndlessDaysDialogue (3)-Test-2
+  - EndlessDaysDialogue (3)-Test.Intresting-3
+  - EndlessDaysDialogue (3)-Test.Intresting-4
+  - EndlessDaysDialogue (3)-Test.Intresting-5
+  - EndlessDaysDialogue (3)-Test.Bye-6
+  - EndlessDaysDialogue (3)-Test2-7
+  - EndlessDaysDialogue (3)-Test2-8
+  - EndlessDaysDialogue (3)-Test2-9
+  - EndlessDaysDialogue (3)-Test2.Part1-10
+  - EndlessDaysDialogue (3)-Test2.Part2-11
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {instanceID: 0}
+  localizations: []

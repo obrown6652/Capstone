@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac92934e2fde24546b6449bc678a115e, type: 3}
+  m_Name: SkeletonSummon
+  m_EditorClassIdentifier: 
+  name: Skeleton Summon
+  damage: 0
+  icon: {fileID: 21300000, guid: 958adf19d8271c24cac940d4c0292039, type: 3}
+  castTime: 0.5
+  Description: Summon a creature at target location
+  magicCost: 4
+  spellType: 2
+  yOffset: 2.5
+  parameter: summon
+  magicCircle_prefab: {fileID: 100008, guid: e3d819d8722fa1f47a3f68574b56dfb3, type: 3}
+  Pet_prefab: {fileID: 306564881953825682, guid: 7d0f93d06c7483141ab2941019fdf1e5,
+    type: 3}

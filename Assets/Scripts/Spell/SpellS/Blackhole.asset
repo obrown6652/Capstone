@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 493d0e45b367a7242a6e742404d90641, type: 3}
+  m_Name: Blackhole
+  m_EditorClassIdentifier: 
+  name: Blackhole
+  damage: 20
+  icon: {fileID: 21300000, guid: 2d66fb2411c3eb84fa80ae8e211f1b54, type: 3}
+  castTime: 0.22
+  Description: Shoot a black hole that is destroyed after 5 seconds.
+  magicCost: 20
+  spellType: 1
+  spellPrefab: {fileID: 8444077002641436086, guid: 11824c8bf10919749a496d91496bdf4c,
+    type: 3}
+  speed: 10
+  parameter: projectile
