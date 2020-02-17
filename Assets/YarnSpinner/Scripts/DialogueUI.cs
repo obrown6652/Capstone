@@ -221,6 +221,8 @@ namespace Yarn.Unity {
         /// Called when the dialogue system has started running.
         public override void DialogueStarted ()
         {
+
+            Debug.Log("Play opening animation");
             // Enable the dialogue controls.
             if (dialogueContainer != null)
                 dialogueContainer.SetActive(true);
@@ -231,6 +233,7 @@ namespace Yarn.Unity {
         /// Called when the dialogue system has finished running.
         public override void DialogueComplete ()
         {
+            Debug.Log("Play close animation");
             onDialogueEnd?.Invoke();
 
             // Hide the dialogue interface.
