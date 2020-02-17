@@ -97,7 +97,7 @@ using Yarn.Unity;
         protected Transform hitBox;
 
         // The character direction 
-        protected Vector2 direction;
+        protected Vector3 direction;
 
         public Vector2 MyDirection
         {
@@ -165,7 +165,7 @@ using Yarn.Unity;
         {
             get
             {
-                return direction != Vector2.zero;
+                return direction != Vector3.zero;
             }
 
 
@@ -185,6 +185,8 @@ using Yarn.Unity;
         {
             Rigidbody = GetComponent<Rigidbody2D>();
             animator = GetComponent<Animator>();
+
+
 
 
             // set the player start health and start max health 
@@ -219,31 +221,21 @@ using Yarn.Unity;
         }
 
         //FixedUpdate is called depending on how many physics frames per second are set in the time settings
-        private void FixedUpdate()
+        protected virtual void FixedUpdate()
         {
             if (Rigidbody != null)
             {
-                Move();
-            }
-
+                if (canMove)
+                {
+                   //Makes sure that the character moves
+                   Rigidbody.velocity = direction.normalized * movementSpeedStat.MyMaxValue; //null error on dummy beacuse movementspeedstat not set
+                }
+            
         }
 
-        //Moves the character 
-        public void Move()
-        {
-            if (isMoving && canMove)
-            {
+    }
 
-                //Makes sure that the character moves
-                Rigidbody.velocity = new Vector2(direction.normalized.x, direction.normalized.y) * movementSpeedStat.MyMaxValue;
-            }
-            else
-            {
-                Rigidbody.velocity = Vector2.zero;
-
-            }
-
-        }
+    
 
         public virtual void handleAnimation()
         {

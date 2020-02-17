@@ -196,8 +196,9 @@ public class Player : Character
     }
 
     //get the player current direction, set it to the down direction 
-    private Vector2 lastDirection= Vector2.down;
+    private Vector3 lastDirection= Vector3.down;
 
+    private bool isDashDownButton;
     [SerializeField]
     private float dashDistance = 2f;
 
@@ -284,14 +285,20 @@ public class Player : Character
     }
 
 
- 
+    //object face camera good for gun
+    private void faceCamera() {
+        Vector3 mousePosition = Input.mousePosition;
+        mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
 
+        Vector2 direction = new Vector2(mousePosition.x - transform.position.x, mousePosition.y - transform.position.y);
+        transform.up = direction;
+    }
 
 
     //Listen to the players input 
     private void getInput() {
-        direction = Vector2.zero;
-       
+        direction = Vector3.zero;
+
 
         // Detect if we want to start a conversation
         if (Input.GetKeyDown(KeyCode.E))
@@ -302,57 +309,55 @@ public class Player : Character
         //direction and control exit points  
         if (Input.GetKey(KeybindManager.MyInstance.Keybinds["UP"]))
         {
+      
             exitIndex = 0;
-            direction += Vector2.up;
-            lastDirection = Vector2.up;
+            direction += new Vector3(0,1);
+            lastDirection = Vector3.up;
 
             minimapIcon.eulerAngles = new Vector3(0,0,0);
             
         }
         if (Input.GetKey(KeybindManager.MyInstance.Keybinds["LEFT"]))
         {
+     
             exitIndex = 3;
-            direction += Vector2.left;
-            lastDirection = Vector2.left;
+            direction += new Vector3(-1, 0);
+            lastDirection = Vector3.left;
 
             if (direction.y == 0)
             {
                 minimapIcon.eulerAngles = new Vector3(0, 0, 90);
             }
-       
-
-
-
         }
+
         if (Input.GetKey(KeybindManager.MyInstance.Keybinds["DOWN"]) )
         {
+          
             exitIndex = 2;
-            direction += Vector2.down;
-            lastDirection = Vector2.down;
-
-         
-             minimapIcon.eulerAngles = new Vector3(0, 0, 180);
-            
+            direction += new Vector3(0, -1);
+            lastDirection = Vector3.down;
 
 
+            minimapIcon.eulerAngles = new Vector3(0, 0, 180);
         }
+
         if (Input.GetKey(KeybindManager.MyInstance.Keybinds["RIGHT"]) )
         {
             exitIndex = 1;
-            direction += Vector2.right;
-            lastDirection = Vector2.right;
+            direction += new Vector3(1, 0);
+            lastDirection = Vector3.right;
 
             if (direction.y == 0)
             {
                 minimapIcon.eulerAngles = new Vector3(0, 0, 270);
             }
         }
-
+       
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
             //manage player dash
-            HandleDash();
+            isDashDownButton = true;
         }
         
 
@@ -417,6 +422,19 @@ public class Player : Character
             magicStat_Frame.MyCurrentValue += 20;
         }
         //test code
+    }
+
+    protected override void FixedUpdate()
+    {
+        base.FixedUpdate();
+
+        if (isDashDownButton)
+        {
+            HandleDash();
+
+        }
+
+       
     }
 
     /// Find all DialogueParticipants
@@ -634,18 +652,18 @@ public class Player : Character
 
     private void HandleDash()
     {
-       
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        
+       
+        if (isDashDownButton)
         {
-            canMove = false;
             MyRigidbody.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
-            Debug.Log("Dashing");
-            CheckMouseDir();
-            MyRigidbody.AddForce(direction * dashDistance,ForceMode2D.Force);
+           
+            MyRigidbody.MovePosition(transform.position + CheckMouseDir(direction) * dashDistance);
+            isDashDownButton = false;
             
         }
-        canMove = true;
+      
     }
     private bool CanMove(Vector3 direction, float distance )
     {
@@ -683,26 +701,84 @@ public class Player : Character
         if (vectorAttack.x >= 0.7f && vectorAttack.y >= -0.7 && vectorAttack.y <= 0.7f)
         {
             //right direction
-            direction= new  Vector2(1, 0);
+
+            animator.SetFloat("moveX", 1);
+            animator.SetFloat("moveY",0);
+            direction = new Vector3(1, 0).normalized;
         }
         else if (vectorAttack.x < 0.7f && vectorAttack.y >= -0.7 && vectorAttack.y <= 0.7f)
         {
             //left direction
-            direction = new Vector2(-1, 0);
+
+            animator.SetFloat("moveX",-1);
+            animator.SetFloat("moveY", 0);
+            direction = new Vector3(-1, 0).normalized;
 
         }
         else if (vectorAttack.y > 0.7f && vectorAttack.x >= -0.7 && vectorAttack.x <= 0.7f)
         {
             //up direction
-            direction = new Vector2(0, 1);
+        
+            animator.SetFloat("moveY", 1);
+            animator.SetFloat("moveX", 0);
+            direction = new Vector3(0, 1).normalized;
         }
         else if (vectorAttack.y < 0.7f && vectorAttack.x > -0.7 && vectorAttack.x < 0.7f)
         {
             //down direciton
-            direction = new Vector2(0, -1);
-
+      
+            animator.SetFloat("moveY", -1);
+            animator.SetFloat("moveX", 0);
+            direction = new Vector3(0,-1);
 
         }
+        direction = Vector3.zero;
+       
+    }
+
+    public Vector3 CheckMouseDir(Vector3 direction)
+    {
+
+        //calculate the mouse pointer, get player direction of mouse pointer
+        Vector2 positionMouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 towardsMouseFromPlayer = positionMouse - (Vector2)transform.position;
+        Vector2 vectorAttack = towardsMouseFromPlayer.normalized;
+
+        if (vectorAttack.x >= 0.7f && vectorAttack.y >= -0.7 && vectorAttack.y <= 0.7f)
+        {
+            //right direction
+
+            animator.SetFloat("moveX", 1);
+            animator.SetFloat("moveY", 0);
+            direction = new Vector3(1, 0).normalized;
+        }
+        else if (vectorAttack.x < 0.7f && vectorAttack.y >= -0.7 && vectorAttack.y <= 0.7f)
+        {
+            //left direction
+
+            animator.SetFloat("moveX", -1);
+            animator.SetFloat("moveY", 0);
+             direction = new Vector3(-1, 0).normalized;
+
+        }
+        else if (vectorAttack.y > 0.7f && vectorAttack.x >= -0.7 && vectorAttack.x <= 0.7f)
+        {
+            //up direction
+
+            animator.SetFloat("moveY", 1);
+            animator.SetFloat("moveX", 0);
+             direction = new Vector3(0, 1).normalized;
+        }
+        else if (vectorAttack.y < 0.7f && vectorAttack.x > -0.7 && vectorAttack.x < 0.7f)
+        {
+            //down direciton
+
+            animator.SetFloat("moveY", -1);
+            animator.SetFloat("moveX", 0);
+            direction = new Vector3(0, -1);
+
+        }
+        return direction ;
     }
 
     public override void ActivateLayer(string layerName)
