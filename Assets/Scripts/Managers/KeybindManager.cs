@@ -46,11 +46,7 @@ public class KeybindManager : MonoBehaviour
        
         BindKey("ACT5", KeyCode.Alpha5);
         
-        BindKey("ACT6", KeyCode.Alpha6);
-        BindKey("ACT7", KeyCode.Alpha7);
-        BindKey("ACT8", KeyCode.Alpha8);
-        BindKey("ACT9", KeyCode.Alpha9);
-        BindKey("ACT0", KeyCode.Alpha0);
+
 
 
 

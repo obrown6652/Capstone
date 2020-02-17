@@ -68,6 +68,7 @@ public class ActionButton : MonoBehaviour, IPointerClickHandler, IClickable
             if (MyUseable != null)
             {
                 MyUseable.Use();
+               
              
             }
             if (useables != null && useables.Count > 0)
@@ -75,6 +76,7 @@ public class ActionButton : MonoBehaviour, IPointerClickHandler, IClickable
                 Debug.Log("use");
                 useables.Peek().Use();
             }
+          
         }
       
     }
@@ -99,9 +101,12 @@ public class ActionButton : MonoBehaviour, IPointerClickHandler, IClickable
             count = useables.Count;
             InventoryScript.MyInstance.FromSlot.MyIcon.color = Color.white;
             InventoryScript.MyInstance.FromSlot = null;
+
+            this.MyUseable = null;
         }
         else
         {
+            this.MyUseable = null;
             this.MyUseable = useable;
 
         }
@@ -133,6 +138,7 @@ public class ActionButton : MonoBehaviour, IPointerClickHandler, IClickable
                 UIManager.MyInstance.UpdateStackSize(this);
             }
         }
+        
     }
 
 }

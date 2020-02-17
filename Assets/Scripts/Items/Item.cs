@@ -93,7 +93,7 @@ public abstract class Item : ScriptableObject, IMoveable, IDescribable
         if (MySlot != null)
         {
             MySlot.RemoveItem(this);
-         //   MySlot = null;
+          //  MySlot = null;
         }
     }
 
