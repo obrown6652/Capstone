@@ -604,6 +604,20 @@ public class Player : Character
         
     }
 
+    private void AttackWeapon() {
+        
+        Armor weapon = this.weapon.MyEquippedArmor;
+
+        if (weapon.MyWeaponType == weaponType.Sword)
+        {
+            AttackSword();
+        }
+        else if (weapon.MyWeaponType == weaponType.Staff)
+        {
+            //AttackStaff();
+        }
+    }
+
     private void AttackSword()
     {
         String weapon = this.weapon.MyEquippedArmor.MyTitle;

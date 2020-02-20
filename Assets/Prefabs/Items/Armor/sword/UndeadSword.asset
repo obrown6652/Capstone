@@ -15,7 +15,7 @@ MonoBehaviour:
   icon: {fileID: -5345558132520266873, guid: 734f9b292cfbfd542b30f72a6ee17a69, type: 3}
   stacksSize: 0
   title: Undead Sword
-  cost: 0
+  cost: 50
   quality: 3
   WeaponAnimationSpeed: 0.16
   armorType: 1
@@ -29,3 +29,4 @@ MonoBehaviour:
   Resistance: 55
   speed: 0
   animationClips: []
+  Description: 
