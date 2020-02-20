@@ -30,7 +30,7 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private GameObject tooltip;
 
-    private Text tooltipText;
+  
 
  
 
@@ -49,7 +49,6 @@ public class UIManager : MonoBehaviour
         }
 
         keybindButtons = GameObject.FindGameObjectsWithTag("Keybind");
-        tooltipText = tooltip.GetComponentInChildren<Text>();
     }
     // Start is called before the first frame update
     void Start()
@@ -121,23 +120,20 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public void ShowTooltip(Vector2 pivot, IDescribable description, Vector2 offset)
+ 
+
+    public void ShowTooltip(Vector2 pivot, Vector2 offset, Item item)
     {
 
+        ToolTip.instance = GetComponent<ToolTip>();
+        ToolTip.MyInstance.Create(item);
+        ToolTip.MyInstance.DeactivateGoldSection();
+
+        tooltip.transform.position = pivot ;
 
         tooltipRect.pivot = offset;
-        tooltip.transform.position = pivot;
-        tooltip.SetActive(true);
-        tooltipText.text = description.GetDescription();
-    }
-    public void ShowTooltip(Vector2 pivot, string description, Vector2 offset)
-    {
 
-
-        tooltipRect.pivot = offset;
-        tooltip.transform.position = pivot;
         tooltip.SetActive(true);
-        tooltipText.text = description;
     }
     public void HideTooltip()
     {
@@ -146,6 +142,12 @@ public class UIManager : MonoBehaviour
 
     public void RefreashTooltip(IDescribable description)
     {
-        tooltipText.text = description.GetDescription();
+        // tooltipText.text = description.GetDescription()
+        if (ToolTip.instance != null)
+        {
+            Debug.Log("Refresh tooltip");
+            ToolTip.MyInstance.Create(ToolTip.MyInstance.Item);
+        }
+       
     }
 }

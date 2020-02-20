@@ -15,9 +15,11 @@ MonoBehaviour:
   icon: {fileID: 4012398000411240167, guid: a740a7eb1127fb34d8b794038fa47ac8, type: 3}
   stacksSize: 0
   title: BlackRobe
+  cost: 150
   quality: 2
   WeaponAnimationSpeed: 0
   armorType: 0
+  weaponType: 0
   health: 0
   healthRecovery: 0
   magic: 0
@@ -35,3 +37,4 @@ MonoBehaviour:
   - {fileID: 7400000, guid: 2cf482e58d7794a4a950cac75832caf2, type: 2}
   - {fileID: 7400000, guid: 84db86a0914aaca41a35681f7ebfb37d, type: 2}
   - {fileID: 7400000, guid: d2aeb75fc8754d74780af6563a8bb167, type: 2}
+  Description: 
