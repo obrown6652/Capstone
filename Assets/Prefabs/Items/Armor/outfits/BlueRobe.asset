@@ -15,11 +15,9 @@ MonoBehaviour:
   icon: {fileID: 3605533554227812211, guid: a740a7eb1127fb34d8b794038fa47ac8, type: 3}
   stacksSize: 0
   title: BlueRobe
-  cost: 150
   quality: 2
   WeaponAnimationSpeed: 0
   armorType: 0
-  weaponType: 0
   health: 0
   healthRecovery: 0
   magic: 50
@@ -37,4 +35,3 @@ MonoBehaviour:
   - {fileID: 7400000, guid: 43a238bb6c8417848a5230602f3041b3, type: 2}
   - {fileID: 7400000, guid: fea75a3a3081ceb43b4b6c30a087ba98, type: 2}
   - {fileID: 7400000, guid: 735ede9b8e805934598e551d05604491, type: 2}
-  Description: 

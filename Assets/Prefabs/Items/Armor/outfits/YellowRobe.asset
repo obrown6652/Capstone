@@ -15,11 +15,9 @@ MonoBehaviour:
   icon: {fileID: -8887596743511999089, guid: 2bdc3aaedadaf824ba97f9c007a25a39, type: 3}
   stacksSize: 0
   title: YellowRobe
-  cost: 150
   quality: 2
   WeaponAnimationSpeed: 0
   armorType: 0
-  weaponType: 0
   health: 0
   healthRecovery: 0
   magic: 0
@@ -37,4 +35,3 @@ MonoBehaviour:
   - {fileID: 7400000, guid: 279b0fe9414ac2749bbb95fea8587364, type: 2}
   - {fileID: 7400000, guid: 0f6a45410781a4944b51d2b15b96a1e5, type: 2}
   - {fileID: 7400000, guid: 58fd4f12ebb22404499b04e6f21962c5, type: 2}
-  Description: 
