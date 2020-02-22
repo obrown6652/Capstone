@@ -47,9 +47,8 @@ public class PickUP : MonoBehaviour, IInteractable,IDescribable
 
     public void OnMouseOver()
     {
-       
-       UIManager.MyInstance.ShowTooltip(Camera.main.WorldToScreenPoint(transform.position), new Vector2(0, 1), item);
-        ToolTip.MyInstance.ActivateGoldSection();
+        UIManager.MyInstance.ShowTooltip(new Vector2(0,0), GetDescription(), new Vector2(-2.5f, -0.1f));
+
     }
     public void OnMouseExit()
     {

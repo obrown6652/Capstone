@@ -97,7 +97,7 @@ public class CharButton : MonoBehaviour, IPointerClickHandler, IPointerEnterHand
     {
         if (equippedArmor != null)
         {
-            UIManager.MyInstance.ShowTooltip(transform.position, new Vector2(1,1), equippedArmor);
+            UIManager.MyInstance.ShowTooltip(transform.position, equippedArmor, new Vector2(1.7f,0));
         }
     }
 

@@ -83,9 +83,9 @@ public abstract class Item : ScriptableObject, IMoveable, IDescribable
     public virtual string GetDescription()
     {
 
+       
 
-
-        return null;
+        return string.Format("<color={0}>{1}</color>", QualityColor.MyColor[quality],title);
     }
 
     public void Remove()
