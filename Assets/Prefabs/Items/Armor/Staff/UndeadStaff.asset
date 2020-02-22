@@ -15,7 +15,7 @@ MonoBehaviour:
   icon: {fileID: -8745389453922174055, guid: 734f9b292cfbfd542b30f72a6ee17a69, type: 3}
   stacksSize: 0
   title: Undead Staff
-  cost: 100
+  cost: 0
   quality: 2
   WeaponAnimationSpeed: 0.16
   armorType: 1
@@ -29,4 +29,3 @@ MonoBehaviour:
   Resistance: 0
   speed: 0
   animationClips: []
-  Description: There is no description

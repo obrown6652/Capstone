@@ -320,7 +320,8 @@ public class SlotScript : MonoBehaviour, IPointerClickHandler,IClickable, IPoint
         //show tooltip
         if (!IsEmpty)
         {
-            UIManager.MyInstance.ShowTooltip(transform.position, new Vector2(1, 1), MyItem);
+            // UIManager.MyInstance.ShowTooltip(new Vector2(-0.25f,1f),transform.position, MyItem);
+            UIManager.MyInstance.ShowTooltip(transform.position, MyItem, new Vector2(-0.5f,1f));
         }
     }
 

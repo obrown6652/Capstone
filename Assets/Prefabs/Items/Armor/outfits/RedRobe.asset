@@ -15,11 +15,9 @@ MonoBehaviour:
   icon: {fileID: 4049485383413392914, guid: 2bdc3aaedadaf824ba97f9c007a25a39, type: 3}
   stacksSize: 0
   title: RedRobe
-  cost: 150
   quality: 2
   WeaponAnimationSpeed: 0
   armorType: 0
-  weaponType: 0
   health: 0
   healthRecovery: 0
   magic: 0
@@ -37,5 +35,3 @@ MonoBehaviour:
   - {fileID: 7400000, guid: 8c8c93cb0ae3c9b4384b3a91a61b9f45, type: 2}
   - {fileID: 7400000, guid: a27f84f62c6d20e4f83729b42ff56597, type: 2}
   - {fileID: 7400000, guid: 57a3e3d621740a3408e926538ac56e9c, type: 2}
-  Description: Acient power run through these frabic unknown to mankind, greatly
-    increasing the user power
