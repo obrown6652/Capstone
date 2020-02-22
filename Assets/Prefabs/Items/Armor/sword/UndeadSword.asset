@@ -17,7 +17,7 @@ MonoBehaviour:
   title: Undead Sword
   cost: 50
   quality: 3
-  WeaponAnimationSpeed: 0.375
+  WeaponAnimationSpeed: 0.16
   armorType: 1
   weaponType: 1
   health: 20
