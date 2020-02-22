@@ -118,6 +118,7 @@ public class Armor : Item
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
             stats += string.Format("\n +{0} health",health);
 =======
@@ -132,6 +133,9 @@ public class Armor : Item
 =======
             stats += string.Format("\n +{0} health", health);
 >>>>>>> master
+=======
+            stats += string.Format("\n +{0} health",health);
+>>>>>>> parent of 484edfa... Merge pull request #3 from obrown6652/Tooltip
 =======
             stats += string.Format("\n +{0} health",health);
 >>>>>>> parent of 484edfa... Merge pull request #3 from obrown6652/Tooltip
