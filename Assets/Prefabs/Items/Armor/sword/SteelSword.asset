@@ -17,7 +17,7 @@ MonoBehaviour:
   title: Steel Sword
   cost: 50
   quality: 0
-  WeaponAnimationSpeed: 0.6
+  WeaponAnimationSpeed: 0.375
   armorType: 1
   weaponType: 1
   health: 5
