@@ -113,35 +113,39 @@ public class Armor : Item
 
         if (health > 0)
         {
+<<<<<<< Updated upstream
             stats += string.Format("\n +{0} health",health);
+=======
+            stats += string.Format("\n +{0} health", Player.MyInstance.MyHealth.MyMaxValue - health);
+>>>>>>> Stashed changes
         }
         if (healthRecovery > 0)
         {
-            stats += string.Format("\n +{0} health Recovery", healthRecovery);
+            stats += string.Format("\n +{0} health Recovery", Player.MyInstance.MyHealthREgenerationStat.MyMaxValue -healthRecovery);
         }
         if (magic > 0)
         {
-            stats += string.Format("\n +{0} magic", magic);
+            stats += string.Format("\n +{0} magic", Player.MyInstance.MyMana.MyMaxValue - magic);
         }
         if (magicRecovery > 0)
         {
-            stats += string.Format("\n +{0} magic Recovery", magicRecovery);
+            stats += string.Format("\n +{0} magic Recovery", Player.MyInstance.MyMagicRegenerationStat.MyMaxValue - magicRecovery);
         }
         if (magicDamage > 0)
         {
-            stats += string.Format("\n +{0} spell Damage", magicDamage);
+            stats += string.Format("\n +{0} spell Damage", Player.MyInstance.MyMagicStrengthStat.MyMaxValue - magicDamage);
         }
         if (physicalDamage > 0)
         {
-            stats += string.Format("\n +{0} physical Damage", physicalDamage);
+            stats += string.Format("\n +{0} physical Damage", Player.MyInstance.MyPhysicalStrengthStat.MyMaxValue - physicalDamage);
         }
         if (Resistance > 0)
         {
-            stats += string.Format("\n +{0} Resistance", Resistance);
+            stats += string.Format("\n +{0} Resistance", Player.MyInstance.MyResistanceStat.MyMaxValue - Resistance);
         }
         if (speed > 0)
         {
-            stats += string.Format("\n +{0} Speed", speed);
+            stats += string.Format("\n +{0} Speed", Player.MyInstance.MyMovementSpeed.MyMaxValue - speed);
         }
         return base.GetDescription()+ stats;
     }
