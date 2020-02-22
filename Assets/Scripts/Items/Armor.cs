@@ -144,7 +144,23 @@ public class Armor : Item
 
         if (health > 0)
         {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+            stats += string.Format("\n +{0} health",health);
+=======
+            stats += string.Format("\n +{0} health", Player.MyInstance.MyHealth.MyMaxValue - health);
+>>>>>>> Stashed changes
+=======
             stats += string.Format("\n +{0} health", health);
+>>>>>>> master
+=======
+            stats += string.Format("\n +{0} health",health);
+>>>>>>> parent of d965311... Player input
+=======
+            stats += string.Format("\n +{0} health", health);
+>>>>>>> master
         }
         if (healthRecovery > 0)
         {
