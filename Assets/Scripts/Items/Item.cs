@@ -83,9 +83,9 @@ public abstract class Item : ScriptableObject, IMoveable, IDescribable
     public virtual string GetDescription()
     {
 
-       
 
-        return string.Format("<color={0}>{1}</color>", QualityColor.MyColor[quality],title);
+
+        return null;
     }
 
     public void Remove()
@@ -93,7 +93,7 @@ public abstract class Item : ScriptableObject, IMoveable, IDescribable
         if (MySlot != null)
         {
             MySlot.RemoveItem(this);
-         //   MySlot = null;
+          //  MySlot = null;
         }
     }
 

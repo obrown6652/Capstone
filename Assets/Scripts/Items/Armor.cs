@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -107,17 +108,51 @@ public class Armor : Item
         }
     }
 
+    [SerializeField]
+    private string Description;
+
     public override string GetDescription()
+    {
+        if (Description == string.Empty)
+        {
+            Description = "There is no description";
+        }
+
+        //split description and break new line after 9 words
+        string[] splitPhases = Description.Split(' ');
+        string newPhase = null;
+        int count = 0;
+        foreach (var splitPhase in splitPhases)
+        {
+            if (count == 9)
+            {
+                Debug.Log("do split");
+                newPhase += Environment.NewLine;
+                count = 0;
+            }
+
+            newPhase = newPhase + splitPhase+ " ";
+            count++;
+           
+        }
+        return (newPhase);
+    }
+
+    public string GetStats()
     {
         string stats = string.Empty;
 
         if (health > 0)
         {
+<<<<<<< HEAD
 <<<<<<< Updated upstream
             stats += string.Format("\n +{0} health",health);
 =======
             stats += string.Format("\n +{0} health", Player.MyInstance.MyHealth.MyMaxValue - health);
 >>>>>>> Stashed changes
+=======
+            stats += string.Format("\n +{0} health", health);
+>>>>>>> master
         }
         if (healthRecovery > 0)
         {
@@ -147,7 +182,7 @@ public class Armor : Item
         {
             stats += string.Format("\n +{0} Speed", Player.MyInstance.MyMovementSpeed.MyMaxValue - speed);
         }
-        return base.GetDescription()+ stats;
+        return base.GetDescription() + stats;
     }
 
     public void Equip()
