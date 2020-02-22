@@ -145,6 +145,7 @@ public class Armor : Item
         if (health > 0)
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
             stats += string.Format("\n +{0} health",health);
 =======
@@ -153,34 +154,37 @@ public class Armor : Item
 =======
             stats += string.Format("\n +{0} health", health);
 >>>>>>> master
+=======
+            stats += string.Format("\n +{0} health",health);
+>>>>>>> parent of d965311... Player input
         }
         if (healthRecovery > 0)
         {
-            stats += string.Format("\n +{0} health Recovery", Player.MyInstance.MyHealthREgenerationStat.MyMaxValue -healthRecovery);
+            stats += string.Format("\n +{0} health Recovery", healthRecovery);
         }
         if (magic > 0)
         {
-            stats += string.Format("\n +{0} magic", Player.MyInstance.MyMana.MyMaxValue - magic);
+            stats += string.Format("\n +{0} magic", magic);
         }
         if (magicRecovery > 0)
         {
-            stats += string.Format("\n +{0} magic Recovery", Player.MyInstance.MyMagicRegenerationStat.MyMaxValue - magicRecovery);
+            stats += string.Format("\n +{0} magic Recovery", magicRecovery);
         }
         if (magicDamage > 0)
         {
-            stats += string.Format("\n +{0} spell Damage", Player.MyInstance.MyMagicStrengthStat.MyMaxValue - magicDamage);
+            stats += string.Format("\n +{0} spell Damage", magicDamage);
         }
         if (physicalDamage > 0)
         {
-            stats += string.Format("\n +{0} physical Damage", Player.MyInstance.MyPhysicalStrengthStat.MyMaxValue - physicalDamage);
+            stats += string.Format("\n +{0} physical Damage", physicalDamage);
         }
         if (Resistance > 0)
         {
-            stats += string.Format("\n +{0} Resistance", Player.MyInstance.MyResistanceStat.MyMaxValue - Resistance);
+            stats += string.Format("\n +{0} Resistance", Resistance);
         }
         if (speed > 0)
         {
-            stats += string.Format("\n +{0} Speed", Player.MyInstance.MyMovementSpeed.MyMaxValue - speed);
+            stats += string.Format("\n +{0} Speed", speed);
         }
         return base.GetDescription() + stats;
     }

@@ -4,8 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using Yarn.Unity;
-using CodeMonkey;
-using CodeMonkey.Utils;
 
 /*
  This class contains functionality that is specific to the player feature include:
@@ -51,29 +49,18 @@ public class Player : Character
 
     [SerializeField]
     private Stat physicalStrengthStat_characterPanel;
-    public Stat MyPhysicalStrengthStat { get{ return physicalStrengthStat_characterPanel; } }
-
     [SerializeField]
     private Stat magicStrengthStat_characterPanel;
-    public Stat MyMagicStrengthStat { get { return magicStrengthStat_characterPanel; } }
-
     [SerializeField]
     private Stat magicRegenerationStat_characterPanel;
-    public Stat MyMagicRegenerationStat { get { return magicRegenerationStat_characterPanel; } }
-
     [SerializeField]
     private Stat healthRegenerationStat_characterPanel;
-    public Stat MyHealthREgenerationStat { get { return healthRegenerationStat_characterPanel; } }
-
     [SerializeField]
     private Stat resistanceStat_characterPanel;
-    public Stat MyResistanceStat { get { return resistanceStat_characterPanel; } }
-
     [SerializeField]
     private Stat spellKnowledge_characterPanel;
-    public Stat MySpellKnowledge { get { return spellKnowledge_characterPanel; } }
     //player speed
-    // private float movementSpeed;
+   // private float movementSpeed;
 
     [SerializeField]
     private int initalMagic = 100;
@@ -151,20 +138,6 @@ public class Player : Character
     //player weapon attack, set it to not attacking
     private bool playerWeaponAttack = false;
 
-    //
-    private float fisrtClickTime;
-    private const float TIME_BETWEEN_CLICKS = .3f;
-    private int clickCount;
-    private bool coroutineAllowed;
-     
-
-    private float lastClickTime;
-   
-    private bool isSingleClick = false;
-    private bool isDoubleClick = false;
-
-    private float startTime, endTime;
-
     //The equipped weapon in the character weapon slot
     // String weapon = CharacterPanel.MyInstance.MyMainhand.MyEquippedArmor.MyTitle;
 
@@ -172,7 +145,6 @@ public class Player : Character
     [SerializeField]
     private CharButton weapon;
     private Armor previousMainHand;
-    public CharButton MyWeapon { get { return weapon; } }
   
     //get outfit slot
     [SerializeField]
@@ -245,11 +217,6 @@ public class Player : Character
     }
     protected override void Start()
     {
-        fisrtClickTime =0f;
-        clickCount = 0;
-        coroutineAllowed = true;
-
-
         //set the player start mana and start max mana
         magicStat_Frame.Initialize(initalMagic, initalMagic);
         //set and start the player mana regeneration by 2points every 2 seconds
@@ -405,18 +372,43 @@ public class Player : Character
         //weapons attack
         if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject()) //check to see if not over an ui
         {
-            Debug.Log("attacking1");
-            clickCount += 1;
-
-            if (clickCount == 1 && coroutineAllowed)
+            if (!MyIsAttack_Basic && !MyIsAttacking_Spells)
             {
-                Debug.Log("attacking2");
-                fisrtClickTime = Time.time;
-                StartCoroutine(DoubleClickDectection());
+                //the mouse click position
+                RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, Mathf.Infinity, 512);
+   
+                //if the mouse pointer isn't over pickupable item
+                if (!hit || hit.collider.tag == "Enemy")
+                {
+
+                    try
+                    {
+                        //check to see if we have a weapon in hand
+                        CharButton weapon = this.weapon;
+
+                        //check to see if there's a weapon equipped
+                        if (weapon.MyEquippedArmor.MyTitle != null)
+                        {
+                            //change the character direction base on the mouse pointer direction
+                            CheckMouseDir();
+                        }
+                        
+                        playerWeaponAttack = true;
+
+                    }
+                    catch (NullReferenceException ex)
+                    {
+
+                        Debug.Log("Can't attack "+ ex);
+                    }
+                    
+                }
+              
             }
-      
-       
+
+          
         }
+
 
 
         //test code 
@@ -431,50 +423,6 @@ public class Player : Character
         }
         //test code
     }
-    private void AttackInput() {
-        if (!MyIsAttack_Basic && !MyIsAttacking_Spells)
-        {
-            //the mouse click position
-            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, Mathf.Infinity, 512);
-
-            //if the mouse pointer isn't over pickupable item
-            if (!hit || hit.collider.tag == "Enemy")
-            {
-                playerWeaponAttack = true;
-
-            }
-
-        }
-    }
-    
-    private IEnumerator DoubleClickDectection() {
-      
-      
-        coroutineAllowed = false;
-        while (Time.time < fisrtClickTime + TIME_BETWEEN_CLICKS)
-        {
-            if (clickCount == 2)
-            {
-                
-                Debug.Log("isdouble");
-                CMDebug.TextPopupMouse("double click" );
-                isDoubleClick = true;
-           
-                break;
-            }
-          
-       
-            yield return new WaitForEndOfFrame();
-           
-           
-        }
-         AttackInput();     //calling attackinput here causes a delay in the 1st animation attack
-
-
-        clickCount = 0;
-        fisrtClickTime = 0f;
-        coroutineAllowed = true;
-    }
 
     protected override void FixedUpdate()
     {
@@ -488,8 +436,6 @@ public class Player : Character
 
        
     }
-
-   
 
     /// Find all DialogueParticipants
     /** Filter them to those that have a Yarn start node and are in range; 
@@ -607,7 +553,6 @@ public class Player : Character
         {
             animator.SetBool("attack", MyIsAttacking_Spells = false);
         }
-
     }
     public override void handleAnimation()
     {
@@ -638,23 +583,13 @@ public class Player : Character
             try
             {
                 //if the weapon in player hand is a sword
-                if (this.weapon.gameObject != null)
+                if (this.weapon.MyEquippedArmor.MyWeaponType == weaponType.Sword)
                 {
-
-                    //check if weapon is a sword or staff
-                    if (weapon.MyEquippedArmor.MyWeaponType == weaponType.Sword)
-                    {
-                        ActivateLayer("1HandSwordAttack");
-                        if (!MyIsAttack_Basic)
-                        {
-                            //start coroutine
-                            attackCoroutine = StartCoroutine(Attack_SwordCoroutine());
-                        }
-                    }
-                    else if (weapon.MyEquippedArmor.MyWeaponType == weaponType.Staff)
-                    {
-
-                    }
+                    AttackSword();
+                }
+                else if (this.weapon.MyEquippedArmor.MyWeaponType == weaponType.Staff)
+                {
+                    Debug.Log("staff in hand");
                 }
                 
             }
@@ -666,7 +601,6 @@ public class Player : Character
             }
             
         }
-<<<<<<< Updated upstream
         
     }
 
@@ -701,54 +635,34 @@ public class Player : Character
         }
         WeaponAttack();
     }
-=======
-     
->>>>>>> Stashed changes
 
+    //start weapon attack coroutine
+    public void WeaponAttack()
+    {
+        if (!MyIsAttack_Basic)
+        {
+            //start coroutine
+            attackCoroutine = StartCoroutine(Attack_Weapon());
+        }
     }
 
-    
-   
-    private IEnumerator Attack_SwordCoroutine()
+    private IEnumerator Attack_Weapon()
     {
-        
 
         if (!MyIsAttack_Basic)
         {
             //set varibles attck to true
             canMove = false;
-            MyAnimator.SetBool("attack", MyIsAttack_Basic = true);
-            CheckMouseDir();
-
-            //activate attack1              
-            Debug.Log("play anim 1");
-            //attack 1
-            MyAnimator.SetTrigger("attack1");
+            MyAnimator.SetBool("attacking", MyIsAttack_Basic = true);
             yield return new WaitForSeconds(weapon.MyEquippedArmor.MyWeaponAnimationSpeed);
-            //weapon.MyEquippedArmor.MyWeaponAnimationSpeed
-
-
-            //activate attack 2
-            if (isDoubleClick)
-            {
-                Debug.Log("double:" + isDoubleClick);
-                Debug.Log("play anim 2");
-                //attack 2
-                MyAnimator.SetTrigger("attack2");
-                yield return new WaitForSeconds(weapon.MyEquippedArmor.MyWeaponAnimationSpeed);
-                isDoubleClick = false;
-            }
-
-
-
 
             // StopAttack();
-            MyAnimator.SetBool("attack", MyIsAttack_Basic = false);
+            MyAnimator.SetBool("attacking", MyIsAttack_Basic = false);
             playerWeaponAttack = false;
             canMove = true;
-            StopCoroutine(Attack_SwordCoroutine());
+            StopCoroutine(Attack_Weapon());
         }
-    } 
+    }
 
     private void HandleDash()
     {
@@ -759,7 +673,7 @@ public class Player : Character
         {
             MyRigidbody.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
            
-            MyRigidbody.MovePosition(transform.position + direction * dashDistance);
+            MyRigidbody.MovePosition(transform.position + CheckMouseDir(direction) * dashDistance);
             isDashDownButton = false;
             
         }
